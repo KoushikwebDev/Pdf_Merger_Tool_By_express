@@ -19,8 +19,8 @@ app.post("/merge", upload.array("pdfs", 2), async function (req, res, next) {
     path.join(__dirname, req.files[1].path)
   );
   //   res.send({ data: req.files });
-  // res.redirect(`http://localhost:3000/static/${d}.pdf`);
-  res.redirect(`https://pdfmerger.up.railway.app/static/${d}.pdf`);
+  res.redirect(`/static/${d}.pdf`);
+  // res.redirect(`https://pdfmerger.up.railway.app/static/${d}.pdf`);
 });
 app.listen(port, () => {
   console.log(`Server app listening on port ${port}`);
